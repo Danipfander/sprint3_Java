@@ -1,4 +1,11 @@
 # Maven package Java project Web App to Linux on Azure
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: '2TDSS-RM552374-Eduardo Junio(b6b518bb-ebed-4d25-9815-9ebb50909d04)'
+    appType: 'webApp'
+    WebAppName: 'stockagil'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.jar'
 # Build your Java project and deploy it to Azure as a Linux web app
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
